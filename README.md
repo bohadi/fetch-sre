@@ -1,6 +1,7 @@
 # Fetch Rewards Coding Assessment - Site Reliability Engineer
 
 Author: Bobak Hadidi
+
 Email: bobak.hadidi@gmail.com
 
 ## Description
@@ -29,16 +30,21 @@ Please assume the evaluator does not have prior experience executing programs in
 ## Usage and Testing
 
 Ensure python and pip and awscli, boto3, and pyyaml are available from your console. On Ubuntu:
+
 `sudo apt-get install python3`
+
 `pip install awscli boto3 pyyaml`
 
 First, set up your AWS credentials, **access type : Programmatic access**.
+
 You will want to configure your user's policy with full permissions to EC2, similarly [as described](https://blog.ipswitch.com/how-to-create-an-ec2-instance-with-python).
+
 In the image below AmazonSSMFullAccess permissions policy is also attached, like so.
 <p align="center"> <img src="./docs/iam_permissions.png"/> </p>
 
 
 The script will provision and deploy the instance using `config.yaml` by default.
+
 `python deploy.py`
 
 The image may take a minute to initialize. (**Pending** status)
@@ -47,10 +53,13 @@ A key-pair is created `fetch-keypair.pem`.
 If you see this error,
 <p align="center"> <img src="./docs/key_permissions.png"/> </p>
 Be sure to change the mode to read-only.
+
 `chmod 400 fetch-keypair.pem`
 
 SSH into the instance with the new keypair or your user1 or user2 keypair.
+
 `ssh -i fetch-keypair.pem ec2-user@--instance public ip goes here--`
+
 `ssh -i mykeypair.pem user1@--instance public ip goes here--`
 
 ## Resources
