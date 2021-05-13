@@ -57,6 +57,7 @@ Be sure to change the mode to read-only.
 `chmod 400 fetch-keypair.pem`
 
 SSH into the instance with the new keypair or your user1 or user2 keypair.
+The instance public IP should be displayed after the deployment runs, or see in your AWS console.
 
 `ssh -i fetch-keypair.pem ec2-user@--instance public ip goes here--`
 
