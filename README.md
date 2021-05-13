@@ -1,9 +1,5 @@
 # Fetch Rewards Coding Assessment - Site Reliability Engineer
 
-Author: Bobak Hadidi
-
-Email: bobak.hadidi@gmail.com
-
 ## Description
 
 Develop an automation program that takes a YAML configuration file as input and deploys a Linux AWS EC2 instance with two volumes and two users.
